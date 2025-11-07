@@ -1,4 +1,4 @@
-<https://maximmorkovnik.github.io/CV/>
+<https://maksymmorkovnyk.github.io/CV/>
   
 <h1>CV (Curriculum vitae)</h1>
   
