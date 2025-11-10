@@ -247,44 +247,16 @@ a {
         opacity: 0.7;
         margin-bottom: 3px;
 
-        &--javaScript::before {
-            width: 55%;
+        &--autoCAD::before {
+            width: 60%;
         }
 
-        &--java::before {
-            width: 55%;
+        &--revit::before {
+            width: 60%;
         }
 
-        &--typeScript::before {
-            width: 35%;
-        }
-
-        &--bootstrap::before {
-            width: 70%;
-        }
-
-        &--flex::before {
-            width: 75%;
-        }
-
-        &--api::before {
-            width: 65%;
-        }
-
-        &--webpack::before {
-            width: 50%;
-        }
-
-        &--npm::before {
-            width: 70%;
-        }
-
-        &--angular::before {
-            width: 55%;
-        }
-
-        &--react::before {
-            width: 25%;
+        &--figma::before {
+            width: 80%;
         }
 
         &--en::before {
