@@ -1,6 +1,7 @@
 :root {
     --black: #000;
     --grey: #5f5e5e;
+    --green: #71c63e;
     --grey-line: #a1a1a1;
     --light-grey: #D8D8D8;
     --dark-blue-background: #05323a;
@@ -264,11 +265,11 @@ a {
         }
 
         &--ua::before {
-            width: 95%;
+            width: 90%;
         }
 
         &--ru::before {
-            width: 95%;
+            width: 90%;
         }
     }
 
