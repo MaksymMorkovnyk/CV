@@ -3,10 +3,10 @@
     --grey: #5f5e5e;
     --green: #71c63e;
     --grey-line: #a1a1a1;
-    --light-grey: #D8D8D8;
+    --light-grey: #d8d8d8;
     --dark-blue-background: #05323a;
     --dark-blue-title: #057a8f;
-    --font: 'Hind', sans-serif;
+    --font: "Hind", sans-serif;
 }
 
 * {
@@ -46,8 +46,7 @@ a {
     margin: 57px auto -20px auto; /* сверху | справа | снизу | слева */
     overflow: hidden;
     position: relative;
-    box-shadow: -5px -5px 30px 3px rgba(0, 0, 0, 0.8),
-        5px 5px 20px 3px rgba(255, 255, 255, 0.3);
+    box-shadow: -5px -5px 30px 3px rgba(0, 0, 0, 0.8), 5px 5px 20px 3px rgba(255, 255, 255, 0.3);
 }
 
 .image {
@@ -107,7 +106,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 78px;
-    
+
     &__wrap {
         word-wrap: break-word;
     }
@@ -150,7 +149,7 @@ a {
     width: 40%;
 
     &::before {
-        content: '';
+        content: "";
         width: 15px;
         height: 15px;
         background-color: var(--grey);
@@ -162,7 +161,7 @@ a {
     }
 
     &::after {
-        content: '';
+        content: "";
         width: 1px;
         height: 100%;
         background-color: var(--grey);
@@ -232,7 +231,7 @@ a {
         margin-bottom: 15px;
 
         &::before {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             height: 100%;
@@ -301,4 +300,252 @@ a {
     text-align: center;
     margin-right: 8px;
     margin-bottom: 40px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN 
+   ============================= */
+
+/* ≤1200px */
+@media screen and (max-width: 1200px) {
+    .container__all {
+        max-width: 1000px;
+    }
+
+    .heading {
+        font-size: 54px;
+    }
+
+    .prof {
+        font-size: 18px;
+        letter-spacing: 8px;
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+    /* 2. Фото пропорційно в колі */
+    .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .photo img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+/* ≤992px */
+@media screen and (max-width: 992px) {
+    .container__all {
+        max-width: 90%;
+    }
+
+    .heading {
+        font-size: 46px;
+    }
+
+    .prof {
+        font-size: 17px;
+        letter-spacing: 6px;
+    }
+
+    .information__name {
+        font-size: 20px;
+    }
+
+    .information__text {
+        font-size: 15px;
+    }
+
+    .job__name,
+    .position__name {
+        font-size: 22px;
+    }
+
+    .job__year,
+    .position__text {
+        font-size: 18px;
+    }
+
+    .skills__name,
+    .interests__item {
+        font-size: 18px;
+    }
+}
+
+/* ≤768px */
+@media screen and (max-width: 768px) {
+    /* 1. Центрування іконок Website / Social */
+    .information__intro .information__text a {
+        display: flex;
+        justify-content: center;
+        margin-left: -25px;
+    }
+
+    /* 2. Зменшення шрифтів, збереження структури */
+    .heading {
+        font-size: 40px;
+    }
+
+    .prof {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+
+    .information__name {
+        font-size: 18px;
+    }
+
+    .information__text {
+        font-size: 14px;
+    }
+
+    .job__name,
+    .position__name {
+        font-size: 20px;
+    }
+
+    .job__year,
+    .position__text {
+        font-size: 15px;
+    }
+
+    /* 3. Лінії Info / Social у старому стилі */
+    .information__title--line {
+        height: 3px;
+        border-radius: 50%;
+        background: linear-gradient(
+            to right,
+            transparent 0%,
+            var(--light-grey) 20%,
+            var(--light-grey) 80%,
+            transparent 100%
+        );
+        margin-bottom: 25px;
+    }
+
+    /* 4. Skills та Language – повернення до початкових відступів */
+    .skills__pro {
+        padding-left: 20%;
+    }
+
+    .skills__level {
+        width: 80%;
+    }
+
+    .skills__name {
+        font-size: 17px;
+    }
+
+    /* 5. Інтереси – компактніше */
+    .interests__item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    /* 1. Центрування всього контенту Info та Social */
+    .information {
+        text-align: center;
+
+        &__intro,
+        &__name,
+        &__text,
+        &__title {
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__title--line {
+            margin: 0 auto 25px auto;
+        }
+    }
+}
+
+/* ≤576px */
+@media screen and (max-width: 576px) {
+    .container__all {
+        padding: 0 10px;
+    }
+
+    /* Заголовки */
+    .heading {
+        font-size: 34px;
+        margin-top: 40px;
+    }
+
+    .prof {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    /* Бокова панель */
+    .photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .information__name {
+        font-size: 17px;
+    }
+
+    .information__text {
+        font-size: 13px;
+    }
+
+    .information__intro .information__text a {
+        justify-content: center;
+    }
+
+    .information__title--line {
+        height: 3px;
+        background: linear-gradient(
+            to right,
+            transparent 0%,
+            var(--light-grey) 25%,
+            var(--light-grey) 75%,
+            transparent 100%
+        );
+        margin: 0 auto 25px auto;
+        width: 100%;
+    }
+
+    /* Main content */
+    .job__name,
+    .position__name {
+        font-size: 18px;
+    }
+
+    .job__year,
+    .position__text {
+        font-size: 14px;
+    }
+
+    /* Skills */
+    .skills__name {
+        font-size: 15px;
+    }
+
+    .skills__pro {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .skills__level {
+        width: 100%;
+    }
+
+    /* Interests */
+    .interests__item {
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
 }
