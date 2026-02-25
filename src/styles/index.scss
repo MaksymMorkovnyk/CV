@@ -209,6 +209,15 @@ a {
     }
 }
 
+.responsibility-list {
+    list-style-type: disc; /* кружечки */
+    padding-left: 20px;
+}
+
+.responsibility-list li {
+    margin-bottom: 8px; /* відступ між рядками */
+}
+
 /* SKILLS
 ====================== */
 
